@@ -23,7 +23,7 @@ Route::get('user-logout',[\App\Http\Controllers\UserController::class,'userLogou
 Route::get('user-profile',[\App\Http\Controllers\UserController::class,'userProfileView'])->name('user.profile.view');
 Route::get('user-reset-password',[\App\Http\Controllers\UserController::class,'userResetPasswordView'])->name('user.reset.password.view');
 Route::get('user-get-otp-code', [\App\Http\Controllers\UserController::class,'getOTPCode'])->name('user.get.otp-code.view');
-Route::get('user-verify-otp',[\App\Http\Controllers\UserController::class,'userVerifyOTPView'])->name('user.verify.otp-mail.view')->middleware('token.verified')
+Route::get('user-verify-otp',[\App\Http\Controllers\UserController::class,'userVerifyOTPView'])->name('user.verify.otp-mail.view')->middleware('token.verified');
 
 Route::post('user/registration',[\App\Http\Controllers\UserController::class,'userRegistration'])->name('user.registration');
 Route::post('user/login',[\App\Http\Controllers\UserController::class,'userLogin'])->name('user.login');
